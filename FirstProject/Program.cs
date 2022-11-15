@@ -1,6 +1,6 @@
 ﻿using FirstProject;
 using System;
-BasedCalculator basedcalculator = new BasedCalculator();
+BaseCalculator basedcalculator = new BaseCalculator();
 Console.WriteLine("Dodawanie - wybierz 1");
 Console.WriteLine("Odejmowanie - wybierz 2");
 Console.WriteLine("Mnożenie - wybierz 3");
