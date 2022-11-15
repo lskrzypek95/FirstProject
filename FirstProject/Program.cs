@@ -1,7 +1,5 @@
 ﻿using FirstProject;
 using System;
-using System.ComponentModel;
-using System.ComponentModel.Design;
 BasedCalculator basedcalculator = new BasedCalculator();
 Console.WriteLine("Dodawanie - wybierz 1");
 Console.WriteLine("Odejmowanie - wybierz 2");
