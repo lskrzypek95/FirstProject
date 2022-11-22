@@ -3,6 +3,7 @@ using System;
 BaseCalculator basedcalculator = new BaseCalculator();
 BaseAlgorithms primeNumber = new BaseAlgorithms();
 BaseAlgorithms factorial = new BaseAlgorithms();
+BaseAlgorithms power = new BaseAlgorithms();
 Menu menu = new Menu();
 menu.ShowBaseCalculatorMenu();
 int baseAction = Convert.ToInt32(Console.ReadLine());
@@ -43,20 +44,33 @@ switch (baseAction)
         menu.ShowBaseAlgorithmMenu();
         int baseAlgorithms = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine("Podaj liczbę");
-        int value = Convert.ToInt32(Console.ReadLine());
+        int value1 = 0;
+        int value2 = 0;
         switch (baseAlgorithms)
         {
             case 1:
                 Console.WriteLine("Czy liczba jest liczba pierwsza?");
-                if (primeNumber.IsPrime(value))
-                Console.WriteLine("Liczba jest liczba pierwsza");
+                value1 = Convert.ToInt32(Console.ReadLine());
+                if (primeNumber.IsPrime(value1))
+                    Console.WriteLine("Liczba jest liczba pierwsza");
                 else
                     Console.WriteLine("Liczba nie jest liczba pierwsza");
                 break;
             case 2:
                 Console.WriteLine("Obliczenie silni z liczby");
-                Console.WriteLine(factorial.Factorial(value));
+                value1 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine(factorial.Factorial(value1));
                 break;
+            case 3:
+                Console.WriteLine("Kalkulator potęg");
+                Console.WriteLine("Podaj podstawę potęgi");
+                value1 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Poda wykładnik potęgi");
+                value2 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine(power.Power(value1, value2));
+                break;
+
+
         }
         break;
 }

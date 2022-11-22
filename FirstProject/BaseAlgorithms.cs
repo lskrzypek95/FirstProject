@@ -2,7 +2,7 @@
 namespace FirstProject
 {
     internal class BaseAlgorithms
-    { 
+    {
         public bool IsPrime(int value)
         {
             bool isPrime = true;
@@ -11,9 +11,9 @@ namespace FirstProject
                 if (value % i == 0)
                     isPrime = false;
             }
-            return isPrime;  
+            return isPrime;
         }
-        public int Factorial (int value)
+        public int Factorial(int value)
         {
             int factorial = 1;
             for (int i = 1; i <= value; i++)
@@ -22,6 +22,16 @@ namespace FirstProject
             }
             return factorial;
         }
+        public int Power(int value1, int value2)
+        {
+            int power = 1;
+            for (int i = 0; i < value2; i++)
+            {
+                power *= value1;
+            }
+            return power;
+        }
+       
     }
 
 }
