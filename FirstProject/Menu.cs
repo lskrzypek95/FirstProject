@@ -14,9 +14,9 @@
         {
             Console.WriteLine("Dodatkowe Dzialania");
             Console.WriteLine("Liczba Pierwsza - wybierz 1");
-            Console.WriteLine("Liczba Doskonała - wybierz 2");
+            Console.WriteLine("Obliczanie silni - wybierz 2");
             Console.WriteLine("Obliczanie potęgi liczby - wybierz 3");
-            Console.WriteLine("Obliczanie silni - wybierz 4");
+            Console.WriteLine("Liczba Doskonała - wybierz 4");
         }
     }
 }

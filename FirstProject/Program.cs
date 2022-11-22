@@ -2,6 +2,7 @@
 using System;
 BaseCalculator basedcalculator = new BaseCalculator();
 BaseAlgorithms primeNumber = new BaseAlgorithms();
+BaseAlgorithms factorial = new BaseAlgorithms();
 Menu menu = new Menu();
 menu.ShowBaseCalculatorMenu();
 int baseAction = Convert.ToInt32(Console.ReadLine());
@@ -51,6 +52,10 @@ switch (baseAction)
                 Console.WriteLine("Liczba jest liczba pierwsza");
                 else
                     Console.WriteLine("Liczba nie jest liczba pierwsza");
+                break;
+            case 2:
+                Console.WriteLine("Obliczenie silni z liczby");
+                Console.WriteLine(factorial.Factorial(value));
                 break;
         }
         break;
