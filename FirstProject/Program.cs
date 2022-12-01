@@ -4,6 +4,7 @@ BaseCalculator basedcalculator = new BaseCalculator();
 BaseAlgorithms primeNumber = new BaseAlgorithms();
 BaseAlgorithms factorial = new BaseAlgorithms();
 BaseAlgorithms power = new BaseAlgorithms();
+BaseAlgorithms perfectNumber = new BaseAlgorithms();
 Menu menu = new Menu();
 menu.ShowBaseCalculatorMenu();
 int baseAction = Convert.ToInt32(Console.ReadLine());
@@ -59,7 +60,7 @@ switch (baseAction)
             case 2:
                 Console.WriteLine("Obliczenie silni z liczby");
                 value1 = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine(factorial.Factorial(value1));
+                Console.WriteLine(factorial.GetFactorial(value1));
                 break;
             case 3:
                 Console.WriteLine("Kalkulator potęg");
@@ -67,10 +68,16 @@ switch (baseAction)
                 value1 = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Poda wykładnik potęgi");
                 value2 = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine(power.Power(value1, value2));
+                Console.WriteLine(power.GetPower(value1, value2));
                 break;
-
-
+            case 4:
+                Console.WriteLine("Czy liczba jest liczba doskonala?");
+                value1 = Convert.ToInt32(Console.ReadLine());
+                if (perfectNumber.IsPerfectNumber(value1))
+                    Console.WriteLine("Liczba jest liczba doskonala");
+                else
+                    Console.WriteLine("Liczba nie jest liczba doskonala");
+                break;
         }
         break;
 }
