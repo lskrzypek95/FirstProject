@@ -1,10 +1,7 @@
 ﻿using FirstProject;
 using System;
 BaseCalculator basedcalculator = new BaseCalculator();
-BaseAlgorithms primeNumber = new BaseAlgorithms();
-BaseAlgorithms factorial = new BaseAlgorithms();
-BaseAlgorithms power = new BaseAlgorithms();
-BaseAlgorithms perfectNumber = new BaseAlgorithms();
+BaseAlgorithms basealgorithms = new BaseAlgorithms();
 Menu menu = new Menu();
 menu.ShowBaseCalculatorMenu();
 int baseAction = Convert.ToInt32(Console.ReadLine());
@@ -50,9 +47,9 @@ switch (baseAction)
         switch (baseAlgorithms)
         {
             case 1:
-                Console.WriteLine("Czy liczba jest liczba pierwsza?");
+                Console.WriteLine("Podaj liczbę - sprawdz czy jest liczba pierwsza");
                 value1 = Convert.ToInt32(Console.ReadLine());
-                if (primeNumber.IsPrime(value1))
+                if (basealgorithms.IsPrime(value1))
                     Console.WriteLine("Liczba jest liczba pierwsza");
                 else
                     Console.WriteLine("Liczba nie jest liczba pierwsza");
@@ -60,7 +57,7 @@ switch (baseAction)
             case 2:
                 Console.WriteLine("Obliczenie silni z liczby");
                 value1 = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine(factorial.GetFactorial(value1));
+                Console.WriteLine(basealgorithms.GetFactorial(value1));
                 break;
             case 3:
                 Console.WriteLine("Kalkulator potęg");
@@ -68,12 +65,12 @@ switch (baseAction)
                 value1 = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Poda wykładnik potęgi");
                 value2 = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine(power.GetPower(value1, value2));
+                Console.WriteLine(basealgorithms.GetPower(value1, value2));
                 break;
             case 4:
-                Console.WriteLine("Czy liczba jest liczba doskonala?");
+                Console.WriteLine("Podaj liczbę - sprawdz czy jest liczba doskonala");
                 value1 = Convert.ToInt32(Console.ReadLine());
-                if (perfectNumber.IsPerfectNumber(value1))
+                if (basealgorithms.IsPerfectNumber(value1))
                     Console.WriteLine("Liczba jest liczba doskonala");
                 else
                     Console.WriteLine("Liczba nie jest liczba doskonala");
