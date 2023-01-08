@@ -75,6 +75,25 @@ switch (baseAction)
                 else
                     Console.WriteLine("Liczba nie jest liczba doskonala");
                 break;
+            case 5:
+                Console.WriteLine("Działania w tablicy");
+                Console.WriteLine("Podaj ilość liczb w tablicy");
+                int amount = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Podaj zawartość tablicy");
+                int[] array = new int [amount];
+                for (int i =0; i < array.Length; i++)
+                {
+                    array [i] = Convert.ToInt32(Console.ReadLine());
+                }
+                Console.WriteLine("Średnia liczb wynosi:");
+                Console.WriteLine(basealgorithms.Average(array));
+                int maxValue = array.Max();
+                int minValue = array.Min();
+                Console.WriteLine("Maksymalna wartość w tabeli:");
+                Console.WriteLine(maxValue);
+                Console.WriteLine("Minimalna wartość w tabeli:");
+                Console.WriteLine(minValue);
+                break;
         }
         break;
 }
