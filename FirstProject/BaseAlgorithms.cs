@@ -41,18 +41,15 @@ namespace FirstProject
                     sum += i;
             }
             return sum == value;
-            return true;
         }
-        public int Average(int[] value)
+        public int GetAverage(int[] value)
         {
             int sum = 0;
             for (int i = 0; i < value.Length; i++)
             {
                 sum += value[i];
             }
-            int average = sum / value.Length;
-            return average;
-
+            return sum / value.Length;
         }
 
     }

@@ -78,21 +78,19 @@ switch (baseAction)
             case 5:
                 Console.WriteLine("Działania w tablicy");
                 Console.WriteLine("Podaj ilość liczb w tablicy");
-                int amount = Convert.ToInt32(Console.ReadLine());
+                int arrayLenght = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Podaj zawartość tablicy");
-                int[] array = new int [amount];
+                int[] array = new int [arrayLenght];
                 for (int i =0; i < array.Length; i++)
                 {
                     array [i] = Convert.ToInt32(Console.ReadLine());
                 }
                 Console.WriteLine("Średnia liczb wynosi:");
-                Console.WriteLine(basealgorithms.Average(array));
-                int maxValue = array.Max();
-                int minValue = array.Min();
+                Console.WriteLine(basealgorithms.GetAverage(array));
                 Console.WriteLine("Maksymalna wartość w tabeli:");
-                Console.WriteLine(maxValue);
+                Console.WriteLine(array.Max());
                 Console.WriteLine("Minimalna wartość w tabeli:");
-                Console.WriteLine(minValue);
+                Console.WriteLine(array.Min());
                 break;
         }
         break;
