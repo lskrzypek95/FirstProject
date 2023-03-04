@@ -134,6 +134,23 @@ switch (baseAction)
                         }
                         break;
                     }
+                case 3:
+                    {
+                        Console.WriteLine("Podaj numer wiersza do wyświetlenia");
+                        int lineNumber = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Linie z pliku:");
+                        int row = 1;
+                        foreach (string line in File.ReadLines(path))
+                        {
+                            if (row == lineNumber)
+                            {
+                                Console.WriteLine(line);
+                            }
+                            row++;  
+                        }
+
+                        break;
+                    }
             }
             break;
         }

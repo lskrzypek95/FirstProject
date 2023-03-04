@@ -32,6 +32,7 @@
         {
             Console.WriteLine("Wyeksportuj tekst do pliku txt - wybierz 1");
             Console.WriteLine("Wyświetl tekst zawarty w pliku txt - wybierz 2");
+            Console.WriteLine("Odczyt jednej linii z pliku txt - wybierz 3");
         }
     }
 }
