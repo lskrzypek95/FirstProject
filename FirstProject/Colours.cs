@@ -5,16 +5,16 @@ namespace FirstProject
 {
     internal class ConsoleColors
     {
-        public void WriteLineChooseColorText(string text, ConsoleColor color)
+        public void WriteLineWithColors(string value, ConsoleColor color)
         {
             Console.ForegroundColor = color;
-            Console.WriteLine(text);
+            Console.WriteLine(value);
             Console.ResetColor();
         }
-        public void WriteLineChooseColorNumbers(int text, ConsoleColor color)
+        public void WriteLineWithColors(int value, ConsoleColor color)
         {
             Console.ForegroundColor = color;
-            Console.WriteLine(text);
+            Console.WriteLine(value);
             Console.ResetColor();
         }
     }
