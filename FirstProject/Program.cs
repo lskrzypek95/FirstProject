@@ -48,6 +48,23 @@ switch (baseAction)
                 colours.WriteLineWithColor("Dzielenie", ConsoleColor.DarkGreen);
                 colours.WriteLineWithColor(basedcalculator.Division(number1, number2), ConsoleColor.DarkCyan);
                 break;
+            case 5:
+                Console.WriteLine("Działania w tablicy");
+                Console.WriteLine("Podaj ilość liczb w tablicy");
+                int arrayLenght = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Podaj zawartość tablicy");
+                int[] array = new int [arrayLenght];
+                for (int i =0; i < array.Length; i++)
+                {
+                    array [i] = Convert.ToInt32(Console.ReadLine());
+                }
+                Console.WriteLine("Średnia liczb wynosi:");
+                Console.WriteLine(basealgorithms.GetAverage(array));
+                Console.WriteLine("Maksymalna wartość w tabeli:");
+                Console.WriteLine(array.Max());
+                Console.WriteLine("Minimalna wartość w tabeli:");
+                Console.WriteLine(array.Min());
+                break;
         }
         break;
     case 2:

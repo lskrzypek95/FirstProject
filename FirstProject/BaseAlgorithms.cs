@@ -1,6 +1,7 @@
 ﻿
 namespace FirstProject
 {
+    
     internal class BaseAlgorithms
     {
         public bool IsPrime(int value)
@@ -31,17 +32,25 @@ namespace FirstProject
             }
             return power;
         }
-       public bool IsPerfectNumber(int value)
+        public bool IsPerfectNumber(int value)
         {
             int sum = 0;
             for (int i = 1; i < value; i++)
             {
-                if (value % i == 0)  
+                if (value % i == 0)
                     sum += i;
             }
             return sum == value;
-                return true;
         }
-    }
+        public int GetAverage(int[] value)
+        {
+            int sum = 0;
+            for (int i = 0; i < value.Length; i++)
+            {
+                sum += value[i];
+            }
+            return sum / value.Length;
+        }
 
+    }
 }
