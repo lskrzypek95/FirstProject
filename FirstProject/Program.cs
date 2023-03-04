@@ -21,32 +21,32 @@ switch (baseAction)
         switch (baseCalculation)
         {
             case 1:
-                colours.WriteLineWithColors("Podaj liczby", ConsoleColor.Green);
+                colours.WriteLineWithColor("Podaj liczby", ConsoleColor.Green);
                 number1 = Convert.ToInt32(Console.ReadLine());
                 number2 = Convert.ToInt32(Console.ReadLine());
-                colours.WriteLineWithColors("Dodawanie", ConsoleColor.DarkBlue);
-                colours.WriteLineWithColors(basedcalculator.Addiction(number1, number2), ConsoleColor.DarkCyan);
+                colours.WriteLineWithColor("Dodawanie", ConsoleColor.DarkBlue);
+                colours.WriteLineWithColor(basedcalculator.Addiction(number1, number2), ConsoleColor.DarkCyan);
                 break;
             case 2:
-                colours.WriteLineWithColors("Podaj liczby", ConsoleColor.Green);
+                colours.WriteLineWithColor("Podaj liczby", ConsoleColor.Green);
                 number1 = Convert.ToInt32(Console.ReadLine());
                 number2 = Convert.ToInt32(Console.ReadLine());
-                colours.WriteLineWithColors("Odejmowanie", ConsoleColor.Red);
-                colours.WriteLineWithColors(basedcalculator.Substraction(number1, number2), ConsoleColor.DarkCyan);
+                colours.WriteLineWithColor("Odejmowanie", ConsoleColor.Red);
+                colours.WriteLineWithColor(basedcalculator.Substraction(number1, number2), ConsoleColor.DarkCyan);
                 break;
             case 3:
-                colours.WriteLineWithColors("Podaj liczby", ConsoleColor.Green);
+                colours.WriteLineWithColor("Podaj liczby", ConsoleColor.Green);
                 number1 = Convert.ToInt32(Console.ReadLine());
                 number2 = Convert.ToInt32(Console.ReadLine());
-                colours.WriteLineWithColors("Mnozenie", ConsoleColor.DarkBlue);
-                colours.WriteLineWithColors(basedcalculator.Multiplication(number1, number2), ConsoleColor.DarkCyan);
+                colours.WriteLineWithColor("Mnozenie", ConsoleColor.DarkBlue);
+                colours.WriteLineWithColor(basedcalculator.Multiplication(number1, number2), ConsoleColor.DarkCyan);
                 break;
             case 4:
-                colours.WriteLineWithColors("Podaj liczby", ConsoleColor.Green);
+                colours.WriteLineWithColor("Podaj liczby", ConsoleColor.Green);
                 number1 = Convert.ToInt32(Console.ReadLine());
                 number2 = Convert.ToInt32(Console.ReadLine());
-                colours.WriteLineWithColors("Dzielenie", ConsoleColor.DarkGreen);
-                colours.WriteLineWithColors(basedcalculator.Division(number1, number2), ConsoleColor.DarkCyan);
+                colours.WriteLineWithColor("Dzielenie", ConsoleColor.DarkGreen);
+                colours.WriteLineWithColor(basedcalculator.Division(number1, number2), ConsoleColor.DarkCyan);
                 break;
         }
         break;
@@ -54,26 +54,26 @@ switch (baseAction)
         {
             menu.ShowBaseAlgorithmMenu();
             int baseAlgorithms = Convert.ToInt32(Console.ReadLine());
-            colours.WriteLineWithColors("Podaj liczbę", ConsoleColor.DarkCyan);
+            colours.WriteLineWithColor("Podaj liczbę", ConsoleColor.DarkCyan);
             int value1 = 0;
             int value2 = 0;
             switch (baseAlgorithms)
             {
                 case 1:
-                    colours.WriteLineWithColors("Podaj liczbę - sprawdz czy jest liczba pierwsza", ConsoleColor.Red);
+                    colours.WriteLineWithColor("Podaj liczbę - sprawdz czy jest liczba pierwsza", ConsoleColor.Red);
                     value1 = Convert.ToInt32(Console.ReadLine());
                     if (basealgorithms.IsPrime(value1))
-                        colours.WriteLineWithColors("Liczba jest liczba pierwsza", ConsoleColor.DarkBlue);
+                        colours.WriteLineWithColor("Liczba jest liczba pierwsza", ConsoleColor.DarkBlue);
                     else
-                        colours.WriteLineWithColors("Liczba nie jest liczba pierwsza", ConsoleColor.DarkBlue);
+                        colours.WriteLineWithColor("Liczba nie jest liczba pierwsza", ConsoleColor.DarkBlue);
                     break;
                 case 2:
-                    colours.WriteLineWithColors("Obliczenie silni z liczby", ConsoleColor.Red);
+                    colours.WriteLineWithColor("Obliczenie silni z liczby", ConsoleColor.Red);
                     value1 = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine(basealgorithms.GetFactorial(value1));
                     break;
                 case 3:
-                    colours.WriteLineWithColors("Kalkulator potęg", ConsoleColor.Red);
+                    colours.WriteLineWithColor("Kalkulator potęg", ConsoleColor.Red);
                     Console.WriteLine("Podaj podstawę potęgi");
                     value1 = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine("Podaj wykładnik potęgi");
@@ -81,12 +81,12 @@ switch (baseAction)
                     Console.WriteLine(basealgorithms.GetPower(value1, value2));
                     break;
                 case 4:
-                    colours.WriteLineWithColors("Podaj liczbę - sprawdz czy jest liczba doskonala", ConsoleColor.Red);
+                    colours.WriteLineWithColor("Podaj liczbę - sprawdz czy jest liczba doskonala", ConsoleColor.Red);
                     value1 = Convert.ToInt32(Console.ReadLine());
                     if (basealgorithms.IsPerfectNumber(value1))
-                        colours.WriteLineWithColors("Liczba jest liczba doskonala", ConsoleColor.DarkBlue);
+                        colours.WriteLineWithColor("Liczba jest liczba doskonala", ConsoleColor.DarkBlue);
                     else
-                        colours.WriteLineWithColors("Liczba nie jest liczba doskonala", ConsoleColor.DarkBlue);
+                        colours.WriteLineWithColor("Liczba nie jest liczba doskonala", ConsoleColor.DarkBlue);
                     break;
             }
             break;
@@ -95,22 +95,21 @@ switch (baseAction)
         {
             menu.ShowTxtOperationsMenu();
             int textOperations = Convert.ToInt32(Console.ReadLine());
+            const string path = @"C:\Users\zodzy\Desktop\FirstProject\FirstProject\txt.txt";
             switch (textOperations)
             {
                 case 1:
                     {
-                        string path1 = @"C:\Users\zodzy\Desktop\FirstProject\FirstProject\txt.txt";
                         string text = Console.ReadLine();
                         {
-                                File.AppendAllText(path1, text);
+                                File.AppendAllText(path, text);
                                 Console.WriteLine("Tekst został dodany do pliku.");         
                         }
                         break;
                     }
                 case 2:
                     {
-                        string path2 = @"C:\Users\zodzy\Desktop\FirstProject\FirstProject\txt.txt";
-                        string[] lines = File.ReadAllLines(path2);
+                        string[] lines = File.ReadAllLines(path);
                         Console.WriteLine("Linie z pliku:");
                         foreach (string line in lines)
                         {
